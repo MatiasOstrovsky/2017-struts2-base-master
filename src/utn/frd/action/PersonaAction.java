@@ -20,6 +20,7 @@ public class PersonaAction extends ActionSupport {
 		int edad = 0;
 		Persona p;
 		
+		
 		try{
 			edad = Integer.parseInt(age);
 		}catch(Exception e){
