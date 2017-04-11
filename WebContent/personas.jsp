@@ -7,32 +7,35 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>personas form</title>
+<title>ABM</title>
 </head>
 <body>
-	<s:form action="save">
-		<s:textfield label="Nombre" name="name"></s:textfield>
-		<s:textfield label="Edad" name="age"></s:textfield>
-		<s:radio label="Genero" name="gender" list="#{'Femenino':'Femenino','Masculino':'Masculino'}" />
-		<s:submit></s:submit>
-		<s:actionerror/>
-	</s:form>
-
-	<table>
-		<tr>
-			<th>ID</th>
-			<th>NOMBRE</th>
-			<th>EDAD</th>
-			<th>GENERO</th>
-		</tr>
-	<s:iterator value="personas" var="p">
-		<tr>
-			<td><s:property value="#p.id"/></td>
-			<td><s:property value="#p.name"/></td>
-			<td><s:property value="#p.age"/></td>
-			<td><s:property value="#p.gender"/></td>
-		</tr>
-	</s:iterator>
-	</table>
+	<div>
+		<s:form action="save">
+			<s:textfield label="Nombre" name="name"></s:textfield>
+			<s:textfield label="Edad" name="age"></s:textfield>
+			<s:radio label="Genero" name="gender" list="#{'Femenino':'Femenino','Masculino':'Masculino'}" />
+			<s:submit></s:submit>
+			<s:actionerror/>
+		</s:form>
+	</div>
+	<div>
+		<table border="1px" style="border-collapse:collapse;">
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE</th>
+				<th>EDAD</th>
+				<th>GENERO</th>
+			</tr>
+		<s:iterator value="personas" var="p" >
+			<tr>
+				<td><s:property value="#p.id"/></td>
+				<td><s:property value="#p.name"/></td>
+				<td><s:property value="#p.age"/></td>
+				<td><s:property value="#p.gender"/></td>
+			</tr>
+		</s:iterator>
+		</table>
+	</div>	
 </body>
 </html>
