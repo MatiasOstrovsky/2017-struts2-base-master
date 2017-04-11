@@ -33,11 +33,6 @@ public class PersonaAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-	public String execute(){
-		personas = PersistentManager.getInstance();
-		
-		return SUCCESS;
-	}
 	
 // getters y setters de name,age,gender y personas
 	public String getName() {
